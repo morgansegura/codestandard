@@ -1,19 +1,17 @@
 # ignore everything in the root except the "wp-content" directory.
 /*
-!wp-content/
 
 # ignore everything in the "wp-content" directory, except:
 # mu-plugins, plugins, and themes directories
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+!mu-plugins/
+!plugins/
+!themes/
 
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
-wp-content/mu-plugins/*
-wp-content/plugins/*
-wp-content/themes/*
+mu-plugins/*
+plugins/*
+themes/*
 
 # ignore all files starting with . or ~
 .*
@@ -60,10 +58,10 @@ Thumbs.db
 # -------------------------
 
 # track these files, if they exist
-!.gitignore
+# !.gitignore
 
 # skip these files, if they exist
-wp-content/.gitignore
+.gitignore
 !.editorconfig
 !.phpcs.xml.dist
 !README.md
@@ -83,56 +81,31 @@ wp-content/.gitignore
 
 # track these mu-plugins, plugins, and themes
 # add your own entries here
-# !wp-content/mu-plugins/example-mu-plugin/
-# !wp-content/plugins/example-plugin/
-# !wp-content/themes/example-theme/
-
-# track these core elements
-# add your own entries here
-!wp-admin/
-!wp-includes/
-!wp-content/upgrade/
-# !wp-content/uploads/
-# !wp-content/w3tc-config/
-# !wp-content/advanced-cache.php
-!index.php
-!license.txt
-!readme.html
-!setup.md
-!wp-activate.php
-!wp-blog-header.php
-!wp-comments-post.php
-!wp-cron.php
-!wp-links-opml.php
-!wp-load.php
-!wp-login.php
-!wp-mail.php
-!wp-settings.php
-!wp-signup.php
-!wp-trackback.php
-!xmlrpc.php
+# !mu-plugins/example-mu-plugin/
+# !plugins/example-plugin/
+# !themes/example-theme/
 
 # track these mu-plugins
 # add your own entries here
-# wp-content/mu-plugins/*
+# mu-plugins/*
 
 # track these plugins
 # add your own entries here
-!wp-content/plugins/advanced-custom-fields-pro/
-!wp-content/plugins/amp/
-!wp-content/plugins/classic-editor/
-!wp-content/plugins/fastly/
-!wp-content/plugins/glue-for-yoast-seo-amp/
-!wp-content/plugins/post-smtp/
-!wp-content/plugins/presto-delivery/
-!wp-content/plugins/w3-total-cache/
-!wp-content/plugins/wordpress-importer/
-!wp-content/plugins/wordpress-seo/
-!wp-content/plugins/wp-serverinfo/
-!wp-content/plugins/wp-smush-pro/
-!wp-content/plugins/wpmudev-updates/
+# !plugins/advanced-custom-fields-pro/
+# !plugins/amp/
+# !plugins/classic-editor/
+# !plugins/fastly/
+# !plugins/glue-for-yoast-seo-amp/
+# !plugins/post-smtp/
+# !plugins/presto-delivery/
+# !plugins/w3-total-cache/
+# !plugins/wordpress-importer/
+# !plugins/wordpress-seo/
+# !plugins/wp-serverinfo/
+# !plugins/wp-smush-pro/
+# !plugins/wpmudev-updates/
 
 # track these themes
 # add your own entries here
-!wp-content/themes/twentynineteen/
-wp-content/themes/twentynineteen/package-lock.json
+!themes/codestandard/
+!themes/codestandard-child/
