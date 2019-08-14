@@ -109,3 +109,4 @@ Thumbs.db
 # add your own entries here
 !themes/codestandard/
 !themes/codestandard-child/
+!themes/port/
