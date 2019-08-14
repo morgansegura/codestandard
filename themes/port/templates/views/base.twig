@@ -1,0 +1,90 @@
+{% block html_head_container %}
+    {% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+{% endblock %}
+<body class="{{ body_class }} " data-template="base.twig">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+    {% block header %}
+        {% include 'partial/header.twig' %}
+    {% endblock %}
+
+
+    {% block content %}
+        Sorry, no content
+    {% endblock %}
+    
+        <!-- Main -->
+        <section id="main">
+
+            <!-- Thumbnails -->
+            <section class="thumbnails">
+
+                {# {{ dump(portfolio) }} #}
+
+                {% for post in posts %}
+                <a href="{{theme.link}}/dist/assets/images/fulls/01.jpg">
+                    <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/01.jpg" />
+                    <h3>{{ post.title }}</h3>
+                </a>
+                {# Use default preview #}
+                <p>{{ post.preview }}</p>
+                {# Change the post preview text #}
+                <p>{{ post.preview.read_more('Continue Reading') }}</p>
+                {# Additionally restrict the length to 50 words #}
+                <p>{{ post.preview.length(50).read_more('Continue Reading') }}</p>
+
+                {% endfor %}
+
+                {# <div>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/01.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/01.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/02.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/02.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/03.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/03.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/04.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/04.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/05.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/05.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/06.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/06.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                        <a href="{{theme.link}}/dist/assets/images/fulls/07.jpg">
+                            <img alt="" src="{{theme.link}}/dist/assets/images/thumbs/07.jpg"/>
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                        </a>
+                    </div> #}
+            </section>
+
+        </section>
+
+
+    {% block footer %}
+        {% include 'partial/footer.twig' %}
+        {{ function('wp_footer') }}
+    {% endblock %}
+    
+    {% block footerScripts %}
+        {% include 'partial/footer-scripts.twig' %}
+    {% endblock %}
+
+</body>
+</html>

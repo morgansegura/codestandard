@@ -1,0 +1,41 @@
+{
+  "name": "noveltypress",
+  "version": "1.0.0",
+  "description": "Wordpress, Twig, Gulp, Webpack, Sass, Postcss",
+  "main": "index.js",
+  "author": "Morgan Segura",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "bundle": "gulp bundle --prod"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@fortawesome/fontawesome-free": "^5.10.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "css-declaration-sorter": "^4.0.1",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^4.39.1",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^13.3.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  }
+}
